@@ -24,6 +24,11 @@ class Webgriffe_TphPro_Model_Observer {
         /** @var Mage_Core_Block_Abstract $block */
         $block = $event->getBlock();
 
+        if ($block instanceof Webgriffe_TphPro_Block_Handles)
+        {
+            return;
+        }
+
         $transport = $event->getTransport();
 
         $html = '';
@@ -62,7 +67,21 @@ class Webgriffe_TphPro_Model_Observer {
         if (Mage::helper('webgriffe_tphpro')->getIsLogHttpParams()) {
             $request = Mage::app()->getRequest();
 
-            $txt = "Request Parameters:\r\n";
+            $userType = 'User';
+            $userName = 'guest';
+
+            if (Mage::app()->getStore()->isAdmin()) {
+                $userType = 'Admin';
+                $userName = Mage::getSingleton('admin/session')->getUser()->getUsername();
+            } else {
+                $email = Mage::getSingleton('customer/session')->getCustomer()->getEmail();
+                if (!empty($email)) {
+                    $userName = $email;
+                }
+            }
+
+            $txt = sprintf("%s Request by '%s'\r\n",  $userType, $userName);
+            $txt .= "Request Parameters:\r\n";
             $txt .= sprintf("Module name: %s\r\n", $request->getModuleName());
             $txt .= sprintf("Controller name: %s\r\n", $request->getControllerName());
             $txt .= sprintf("Action name: %s\r\n", $request->getActionName());

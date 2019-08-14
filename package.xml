@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <package>
     <name>Webgriffe_TphPro</name>
-    <version>1.1.0</version>
+    <version>1.1.3</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">OSL</license>
     <channel>community</channel>
     <extends/>
-    <summary>An enhanced Template Path Hints extension for Magento that inserts references to used Magento Blocks inside HTML code, avoiding the usage of the more invasive built in Template Path Hints.</summary>
+    <summary>n enhanced Template Path Hints extension for Magento that inserts references to used Magento Blocks inside HTML code, avoiding the usage of the more invasive built in Template Path Hints.</summary>
     <description>This extension allows you to print some useful information about Frontend Blocks in the HTML of your page.&#xD;
 &#xD;
 You can choose whether to print them as HTML Elements or Comments.&#xD;
 &#xD;
 Furthermore you can choose to log both Frontend and Backend HTTP Request's parameters.&#xD;
 &#xD;
-Once installed, you can configure this extension in the System &gt; Configuration &gt; WEBGRIFFE EXTENSIONS &gt; Template Path Hints Pro section.</description>
+Once installed, you can configure this extension in the System &amp;gt; Configuration &amp;gt; WEBGRIFFE EXTENSIONS &amp;gt; Template Path Hints Pro section.</description>
     <notes>the module is also available on github https://github.com/aleron75/Webgriffe_TphPro</notes>
     <authors><author><name>Webgriffe</name><user>webgriffe</user><email>mail@webgriffe.com</email></author></authors>
-    <date>2013-11-27</date>
-    <time>11:46:22</time>
-    <contents><target name="magecommunity"><dir name="Webgriffe"><dir name="TphPro"><dir name="Block"><file name="Handles.php" hash="7ee9d6173d0fa0c239b3a309c74ef701"/></dir><dir name="Helper"><file name="Data.php" hash="d677fdd630a6bfc23768b702a5a07bf9"/></dir><dir name="Model"><file name="Observer.php" hash="2dcc887f26c60bd0ff457780167332a5"/><dir name="System"><dir name="Config"><dir name="Source"><file name="Display.php" hash="56e50ea3e82e749d80530231863f834c"/></dir></dir></dir></dir><dir name="etc"><file name="config.xml" hash="7dc7bde9da8728f4bf6b4186935cc14d"/><file name="system.xml" hash="db5b1984b67aa26578afa6c87d6c8021"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Webgriffe_TphPro.xml" hash="c19ce79f7ac273f912e1b8cbcd371b14"/></dir></target></contents>
+    <date>2014-03-18</date>
+    <time>10:36:35</time>
+    <contents><target name="magecommunity"><dir name="Webgriffe"><dir name="TphPro"><dir name="Block"><file name="Handles.php" hash="e77836aa6893c6cb95dcb53c9bb4dba0"/></dir><dir name="Helper"><file name="Data.php" hash="b634adb7d79c0dc47ddf75e637af7fd3"/></dir><dir name="Model"><file name="Observer.php" hash="2f7a3fa8e269240fa5c5487618ded499"/><dir name="System"><dir name="Config"><dir name="Source"><file name="Display.php" hash="179e61c670aadbb52ed2b97df2f99a7d"/></dir></dir></dir></dir><dir name="etc"><file name="config.xml" hash="5aa3ba63ebe7f4a2ec3020e1b4b1e083"/><file name="system.xml" hash="62b26796fa60185cbc48aea18bb0e4aa"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Webgriffe_TphPro.xml" hash="306228869af43163d9e123810cbea36b"/></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.7.0.0</min><max>1.8</max></package></required></dependencies>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

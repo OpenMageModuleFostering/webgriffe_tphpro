@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Webgriffe_TphPro>
+            <version>1.1.0</version>
+        </Webgriffe_TphPro>
+    </modules>
+    <global>
+        <blocks>
+            <webgriffe_tphpro>
+                <class>Webgriffe_TphPro_Block</class>
+            </webgriffe_tphpro>
+        </blocks>
+        <helpers>
+            <webgriffe_tphpro>
+                <class>Webgriffe_TphPro_Helper</class>
+            </webgriffe_tphpro>
+        </helpers>
+        <models>
+            <webgriffe_tphpro>
+                <class>Webgriffe_TphPro_Model</class>
+            </webgriffe_tphpro>
+        </models>
+
+        <events>
+            <http_response_send_before>
+                <observers>
+                    <webgriffe_http_response_send_before>
+                        <type>enabled</type>
+                        <class>webgriffe_tphpro/observer</class>          
+                        <method>logRequestParameters</method>
+                    </webgriffe_http_response_send_before>
+                </observers>
+            </http_response_send_before>
+        </events>        
+    </global>
+    
+    <frontend>
+        <events>
+            <controller_action_layout_generate_blocks_before>
+                <observers>
+                    <webgriffe_tphpro_generate_blocks_before>
+                        <type>singleton</type>
+                        <class>webgriffe_tphpro/observer</class>          
+                        <method>addHandlesBlock</method>
+                    </webgriffe_tphpro_generate_blocks_before>
+                </observers>    
+            </controller_action_layout_generate_blocks_before>
+            
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <webgriffe_tphpro_block_to_html_after>
+                        <type>singleton</type>
+                        <class>webgriffe_tphpro/observer</class>          
+                        <method>addTemplateHints</method>
+                    </webgriffe_tphpro_block_to_html_after>
+                </observers>    
+            </core_block_abstract_to_html_after>
+        </events>
+    </frontend>
+
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <webgriffe_tphpro>
+                                            <title>Webgriffe - Template Path Hints Pro</title>
+                                        </webgriffe_tphpro>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

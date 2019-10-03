@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 An enhanced Template Path Hints extension for Magento that inserts references to used Magento Blocks inside HTML code, avoiding the usage of the more invasive built in Template Path Hints.

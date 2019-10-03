@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Webgriffe_TphPro",
+    "name": "OpenMageModuleFostering\/Webgriffe_TphPro",
     "type": "magento-module",
     "license": "OSL",
     "homepage": "",
     "description": "An enhanced Template Path Hints extension for Magento that inserts references to used Magento Blocks inside HTML code, avoiding the usage of the more invasive built in Template Path Hints.",
     "authors": [
-    {
-        "name": "Alessandro Ronchi",
-        "email": "mail@webgriffe.com"
-    }
-],
+        {
+            "name": "Alessandro Ronchi",
+            "email": "mail@webgriffe.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
